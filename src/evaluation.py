@@ -1,8 +1,6 @@
 """
 Module: evaluation.py
 Description: Evaluation script for the Seq2Seq model with attention/self-attention.
-Author: [Your Name]
-Date: [Date]
 
 This script:
 - Loads the trained Seq2Seq model checkpoint.

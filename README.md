@@ -1,52 +1,56 @@
-# Attention and Self-Attention Project
+# English-to-Russian Machine Translation with Seq2Seq and Attention
 
-This project implements a basic attention mechanism and a self-attention module in PyTorch. It is designed for experimentation and visualization, and serves as a foundation for more advanced models (such as transformers).
+This repository implements an English-to-Russian translation system using a Sequence-to-Sequence (Seq2Seq) model with attention mechanisms. The project is built with PyTorch and includes modules for data preprocessing, model definition, training, evaluation, and attention.
 
 ## Project Structure
 
-```markdown
-attention_project/ 
-├── data/ 
-├── notebooks/
-├── src/ 
-│ ├── init.py 
-│ ├── attention.py 
-│ ├── self_attention.py 
-│ └── utils.py 
-├── tests/ 
-│ ├── init.py 
-│ └── test_attention.py 
-├── README.md 
-├── requirements.txt 
-└── setup.py
-```
+- **notebooks/**
+  - **analysis.ipynb**
+  
+    Testing attention mechanism.
+- **src/**
+  - **seq2seq.py**  
+    Implements the core Seq2Seq model with an LSTM-based Encoder and an Attention-based Decoder.
+  - **attention.py**  
+    Provides a basic scaled dot-product attention mechanism.
+  - **self_attention.py**  
+    Implements self-attention for projecting inputs into query, key, and value spaces.
+  - **train.py**  
+    Contains the training pipeline: data loading, vocabulary building, model training, and checkpoint saving.
+  - **evaluation.py**  
+    Evaluates the trained model on test data and demonstrates sample translations.
+  - **utils.py**  
+    Includes utility functions for data loading, preprocessing, and visualization.
+- **data/**  
+  Contains the translation dataset (e.g., `rus.txt`).
+
+## Features
+
+- Preprocessing of English–Russian sentence pairs.
+- Dynamic vocabulary building for source and target languages.
+- LSTM-based encoder and attention-enabled decoder.
+- End-to-end training and evaluation pipelines.
+- Model checkpointing.
+
+## Requirements
+
+   ```bash
+   pip install requirements
+   ```
 
 ## Usage
 
-1. **Data Exploration and Debugging:**  
-   Open the Jupyter Notebook in `notebooks/analysis.ipynb` to:
-   - Load the translation data (using only the first two columns).
-   - Visualize sentence length statistics.
-   - Test the self-attention module on dummy input and inspect attention weights.
+1. **Data Preparation**:  
+   Place your tab-separated translation dataset in the `data/` directory.
 
-2. **Running Tests:**  
-   Run `pytest` in the root directory to execute tests defined in `tests/test_attention.py`.
+2. **Training**:  
+   Run the training script to build vocabularies, train the model, and save checkpoints.
+   ```bash
+   python src/train.py
+   ```
 
-3. **Development:**  
-   Extend the modules in the **src/** folder as needed. Contributions and improvements are welcome!
-
-## Installation
-
-Install the required packages with:
-
-```bash
-pip install -r requirements.txt
-```
-You can also install the project as a package (if needed):
-
-```bash
-python setup.py install
-```
-
-# Author
-[Qnarik Poghosyan](https://www.linkedin.com/in/qnarik-poghosyan-b4b04a26a/)
+3. **Evaluation**:  
+   Evaluate the model and test translation inference.
+   ```bash
+   python src/evaluation.py
+   ```

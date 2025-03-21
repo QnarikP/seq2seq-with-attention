@@ -37,3 +37,7 @@ Thumbs.db
 src/checkpoints/
 *.pt
 *.pth
+
+models/
+
+src/runs/

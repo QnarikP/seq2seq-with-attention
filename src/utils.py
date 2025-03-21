@@ -1,15 +1,10 @@
 """
 Module: utils.py
 Description: Utility functions for data loading and visualization.
-Author: [Your Name]
-Date: [Date]
 
 This module includes functions to load translation data from a text file and to
 visualize key properties of the dataset.
 """
-
-import os
-
 
 def load_translation_data(filepath):
     """

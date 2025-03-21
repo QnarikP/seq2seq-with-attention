@@ -4,8 +4,6 @@ Description: Implements a Sequence-to-Sequence (Seq2Seq) model with attention
              for English-to-Russian translation. The model consists of an
              encoder, a decoder that integrates an attention mechanism, and
              a wrapper class for the complete seq2seq architecture.
-Author: [Your Name]
-Date: [Date]
 
 This file contains:
     - Encoder: Encodes the source sentence.

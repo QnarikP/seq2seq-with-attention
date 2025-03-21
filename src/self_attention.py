@@ -1,8 +1,6 @@
 """
 Module: self_attention.py
 Description: Implements a self-attention mechanism using the basic attention function.
-Author: [Your Name]
-Date: [Date]
 
 This module defines a PyTorch module for self-attention. It projects an input
 sequence into query, key, and value spaces and then computes self-attention.

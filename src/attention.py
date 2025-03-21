@@ -1,8 +1,6 @@
 """
 Module: attention.py
 Description: Implements a basic scaled dot-product attention mechanism.
-Author: [Your Name]
-Date: [Date]
 
 This module contains a function to compute the attention weights
 and the resulting weighted sum of values.

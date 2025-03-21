@@ -1,8 +1,6 @@
 """
 Module: train.py
 Description: Training script for the Seq2Seq model with attention/self-attention for English→Russian translation.
-Author: [Your Name]
-Date: [Date]
 
 This script:
 - Loads and preprocesses the translation data.
